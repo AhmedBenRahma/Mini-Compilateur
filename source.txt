@@ -1,0 +1,59 @@
+program fulltest;
+
+(* Déclarations de variables *)
+var
+    a, b, c, d : integer;
+
+var
+    ch : char;
+
+begin
+    (* Lecture de a *)
+    read(a);
+
+    (* Affectations avec plusieurs opérations *)
+    b := a + 5;
+    c := b * 3 - (a / 2);
+    d := (c % 4) + (b * 2) - 1;
+
+    (* Tests relationnels *)
+    if a = b then
+        writeln(a)
+    else
+        writeln(b);
+
+    if a <> c then
+        writeln(c)
+    else
+        writeln(a);
+
+    if b >= d then
+        write(b)
+    else
+        write(d);
+
+    (* IF imbriqué *)
+    if a < b then
+        if b < c then
+            writeln(c)
+        else
+            writeln(b)
+    else
+        writeln(a);
+
+    (* Boucle WHILE *)
+    while a < 10 do
+        a := a + 1;
+
+    writeln(a);
+
+    (* Affectations supplémentaires *)
+    b := a * 2;
+    c := b - a + 7;
+    d := (a + b + c) / 3;
+
+    (* Affichage final *)
+    writeln(b);
+    writeln(c);
+    writeln(d)
+end.
